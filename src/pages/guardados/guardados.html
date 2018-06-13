@@ -1,0 +1,22 @@
+
+<ion-header>
+
+  <ion-navbar color = "dark"> 
+    <ion-title>Log de Sacan</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <button ion-item
+            *ngFor="let datos of historial; let x = index"
+            (click)="abrirScan(x)">
+      <h2>{{ historial[x].info }}</h2>
+      <p>{{ historial[x].tipo }}</p>
+    </button>
+  </ion-list>
+
+</ion-content>
